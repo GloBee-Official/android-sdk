@@ -177,7 +177,7 @@ public class BitPayAndroid extends BitPay implements Parcelable {
     }
 
     public static BitpayPromise<BitPayAndroid> getClient(final String privateKey, final Executor executor) {
-        return getClient(privateKey, "https://bitpay.com/", executor);
+        return getClient(privateKey, "https://globee.com/", executor);
     }
     public static BitpayPromise<BitPayAndroid> getClient(final String privateKey, final String server) {
         return getClient(privateKey, server, AsyncTask.THREAD_POOL_EXECUTOR);
@@ -188,7 +188,7 @@ public class BitPayAndroid extends BitPay implements Parcelable {
     }
 
     public static BitpayPromise<BitPayAndroid> withToken(final String token) {
-        return withToken(token, "https://bitpay.com/", AsyncTask.THREAD_POOL_EXECUTOR);
+        return withToken(token, "https://globee.com/", AsyncTask.THREAD_POOL_EXECUTOR);
     }
 
     public static BitpayPromise<BitPayAndroid> withToken(final String token, final String serverUrl, final Executor executor) {
@@ -355,7 +355,7 @@ public class BitPayAndroid extends BitPay implements Parcelable {
                 if (clients.containsKey(ecKey)) {
                     return clients.get(ecKey);
                 }
-                BitPayAndroid client = new BitPayAndroid(KeyUtils.loadFromHexaEncodedPrivateKey(ecKey), "Android Client", "https://test.bitpay.com/");
+                BitPayAndroid client = new BitPayAndroid(KeyUtils.loadFromHexaEncodedPrivateKey(ecKey), "Android Client", "https://test.globee.com/");
                 clients.put(ecKey, client);
                 return client;
             } catch (BitPayException e) {
@@ -375,7 +375,7 @@ public class BitPayAndroid extends BitPay implements Parcelable {
             token.setFacade("pos");
             token.setValue(tokenStr);
             String url = params.length > 1? params[1] : null;
-            BitPayAndroid client = new BitPayAndroid(token, url == null ? "https://test.bitpay.com/" : url);
+            BitPayAndroid client = new BitPayAndroid(token, url == null ? "https://test.globee.com/" : url);
             return client;
         }
     }

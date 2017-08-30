@@ -342,7 +342,7 @@ public class InvoiceActivity extends Activity implements NfcAdapter.CreateNdefMe
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("message/rfc822");
-                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"support@bitpay.com"});
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"support@globee.com"});
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Refund Request");
                 intent.putExtra(Intent.EXTRA_TEXT, "Invoice: " + mInvoice.getUrl() +
                         ((mInvoice.getRefundAddresses() != null && mInvoice.getRefundAddresses().size() > 0)

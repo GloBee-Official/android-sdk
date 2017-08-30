@@ -25,7 +25,7 @@ public class BitPayAndroidTest extends AndroidTestCase {
     public void testCreateInvoice() {
 
         final CountDownLatch latch = new CountDownLatch(1);
-        BitPayAndroid.withToken(invoiceToken, "https://test.bitpay.com/").then(new BitpayPromiseCallback() {
+        BitPayAndroid.withToken(invoiceToken, "https://test.globee.com/").then(new BitpayPromiseCallback() {
             @Override
             public void onSuccess(BitPayAndroid client) {
                 client.createNewInvoice(new Invoice(10.00, "USD")).then(new PromiseCallback<Invoice>() {
@@ -60,7 +60,7 @@ public class BitPayAndroidTest extends AndroidTestCase {
     public void testCreateClient() {
 
         final CountDownLatch latch = new CountDownLatch(1);
-        BitPayAndroid.withToken(invoiceToken, "https://test.bitpay.com/").then(new BitpayPromiseCallback() {
+        BitPayAndroid.withToken(invoiceToken, "https://test.globee.com/").then(new BitpayPromiseCallback() {
             @Override
             public void onSuccess(BitPayAndroid client) {
                 assertNotNull(client);
@@ -82,7 +82,7 @@ public class BitPayAndroidTest extends AndroidTestCase {
     }
     public void testCreateClientWithIdentity() {
         final CountDownLatch latch = new CountDownLatch(1);
-        BitPayAndroid.getClient(privateKey, "https://test.bitpay.com/").then(new BitpayPromiseCallback() {
+        BitPayAndroid.getClient(privateKey, "https://test.globee.com/").then(new BitpayPromiseCallback() {
             @Override
             public void onSuccess(BitPayAndroid client) {
                 assertNotNull(client);

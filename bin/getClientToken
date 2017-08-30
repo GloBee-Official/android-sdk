@@ -26,7 +26,7 @@ var public_key = bitauth.getPublicKeyFromPrivateKey(private_key);
 var sin = bitauth.getSinFromPublicKey(public_key);
 
 var guid = (new Date()).getTime();
-var url = 'https://' + 'bitpay.com/tokens';
+var url = 'https://' + 'globee.com/tokens';
 var data = JSON.stringify({
   guid: Math.floor(guid%1e5) + '',
   id: sin,
@@ -34,7 +34,7 @@ var data = JSON.stringify({
   nonce: guid
 });
 var options = {
-  hostname: (test ? 'test.' : '') + 'bitpay.com',
+  hostname: (test ? 'test.' : '') + 'globee.com',
   port: 443,
   path: '/tokens',
   method: 'POST',

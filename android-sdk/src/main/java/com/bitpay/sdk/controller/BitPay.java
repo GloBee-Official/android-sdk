@@ -36,8 +36,8 @@ import java.util.List;
 public class BitPay {
 
     private static final String BITPAY_API_VERSION = "2.0.0";
-    private static final String BITPAY_PLUGIN_INFO = "BitPay Java Client " + BITPAY_API_VERSION;
-    private static final String BITPAY_URL = "https://bitpay.com/";
+    private static final String BITPAY_PLUGIN_INFO = "GloBee Java Client " + BITPAY_API_VERSION;
+    private static final String BITPAY_URL = "https://globee.com/";
 
     public static final String FACADE_PAYROLL = "payroll";
     public static final String FACADE_POS = "pos";

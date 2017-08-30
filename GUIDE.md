@@ -1,10 +1,10 @@
-# Using the BitPay Android SDK
+# Using the GloBee Android SDK
 
 ## Prerequisites
 
-You must have a BitPay merchant account to use this SDK.  It's free to [sign-up for a BitPay merchant account](https://bitpay.com/start).
+You must have a GloBee merchant account to use this SDK.  It's free to [sign-up for a GloBee merchant account](https://globee.com/register).
 
-Once you have a BitPay merchant account, you will need [a working BitPay Access Token](/api/getting-access.html) – this can be done either via the SDK (pairing process) or manually in [the BitPay Dashboard](https://bitpay.com/tokens).
+Once you have a GloBee merchant account, you will need [a working GloBee Access Token](/api/getting-access.html) – this can be done either via the SDK (pairing process) or manually in [the GloBee Dashboard](https://globee.com/tokens).
 
 
 ## Installing
@@ -57,13 +57,13 @@ A `.aar` library is provided in the `dist` folder, so you can include it in your
 
 ## Setup credentials
 
-### 1. Create a BitPay Account
+### 1. Create a GloBee Account
 
-Please go to https://bitpay.com to create an account.
+Please go to https://globee.com/register to create an account.
 
 ### 2. Generate an Application Token
 
-Go to [*My Account* > *API Tokens*](https://bitpay.com/api-tokens) section. Click on the _Add New Token_ button and make a token with the `Point-of-Sale` capability for multiple clients. You can then include this token with your application.
+Go to [*My Account* > *API Tokens*](https://globee.com/api-tokens) section. Click on the _Add New Token_ button and make a token with the `Point-of-Sale` capability for multiple clients. You can then include this token with your application.
 
 #### (Advanced) Pairing a 'Merchant' Token
 
@@ -90,7 +90,7 @@ new BitPayAndroid.GetClientWithTokenTask() {
 }.execute(clientToken);
 ```
 
-This class inherits from `BitPay` so you can use all the methods of the [BitPay Java Client Library](https://github.com/bitpay/java-bitpay-client).
+This class inherits from `BitPay` so you can use all the methods of the [GloBee Java Client Library](https://github.com/GloBee-Official/java-bitpay-client).
 
 #### Using promises:
 
@@ -112,7 +112,7 @@ BitPayAndroid.withToken(clientToken).then(new BitpayPromiseCallback() {
 
 ```java
 String clientToken = "00000000000000000000000";
-BitPayAndroid.withToken(clientToken, "https://test.bitpay.com/").then(
+BitPayAndroid.withToken(clientToken, "https://test.globee.com/").then(
     // ...
 );
 ```
